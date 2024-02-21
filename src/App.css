@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+:root{
+    --darkreader-text-gray: #dad7d2;
+    --darkreader-background: #0c0d0e;
+    --fondo-loading: #000;
+    --orange: #f36100
+}
+*{
+    font-family: 'Sora', sans-serif;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+html{
+    font-size: clamp(12px, .8rem + .25vw, 16px);
+}
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.button_level{
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    line-height: 60px;
+    margin: auto;
+    height: 60px;
+    width: 220px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.88rem;
+    border: none;
+    background-color: #19c3c9;
+    background-image: linear-gradient(to right, #19c3c9 0%, #6cfbf1  50%, #1d9797  100%);
+    background-size: 200% auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button_level:hover{
+    background-position: right center;
+    transform: scaleX(1.03);
+}
+.desaparecer{
+    opacity: 0;
+}
+.animation_aparecer{
+    animation: aparecer .5s ease-in-out forwards;
+}
+@keyframes aparecer {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 450px) {
+    .button_level{
+        height: 60px;
+        max-width: 200px;
+        width: 100%;
+    }
+}
